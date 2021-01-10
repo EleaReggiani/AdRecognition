@@ -132,16 +132,19 @@ def check_set_db():
     displayed_1 = ("UPDATE urls_table SET displayed=1 WHERE id=" + str(tab[0][0]))
 
 
+    ret = False
     if tab[0][2] == tab[1][2] or tab[0][3] == tab[1][3]:
         cursor.execute(displayed_0)
     else :
         cursor.execute(displayed_1)
-    
+        ret = True
+ 
     #comit and close db connexion
     cnx.commit()   
     cursor.close()
     cnx.close()
-
+    return ret
+    
 
 
 def main():
@@ -149,6 +152,6 @@ def main():
     print(url)
     brand = detect_logo(url)
     insert_into_db(url, brand, '')
-    check_set_db()
+    return check_set_db()
 
 main()
