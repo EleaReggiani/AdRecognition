@@ -1,5 +1,9 @@
 # AdRecognition
 
+## Link to the presentation
+
+[Clic here](Project_Presentation.pdf)
+
 ## Start Project
 
 Run : 
