@@ -1,0 +1,4 @@
+mysql-connector
+GCP
+Video-intelligence
+wget
